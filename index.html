@@ -540,3 +540,43 @@
 		</tr>
 	</tbody>
 </table>
+
+<p>docker build -t getting-started .</p>
+
+<p>The docker build command uses the Dockerfile to build a new container image. You might have noticed that Docker downloaded a lot of &ldquo;layers&rdquo;. This is because you instructed the builder that you wanted to start from the node:18-alpine image. But, since you didn&rsquo;t have that on your machine, Docker needed to download the image.</p>
+
+<p>After Docker downloaded the image, the instructions from the Dockerfile copied in your application and used yarn to install your application&rsquo;s dependencies. The CMD directive specifies the default command to run when starting a container from this image.</p>
+
+<p>Finally, the -t flag tags your image. Think of this simply as a human-readable name for the final image. Since you named the image getting-started, you can refer to that image when you run a container.</p>
+
+<p>The . at the end of the docker build command tells Docker that it should look for the Dockerfile in the current directory.</p>
+
+<p><br />
+docker run -dp 127.0.0.1:3000:3000 getting-started<br />
+The -d flag (short for --detach) runs the container in the background. The -p flag (short for --publish) creates a port mapping between the host and the container.<br />
+The -p flag take a string value in the format of HOST:CONTAINER, where HOST is the address on the host, and CONTAINER is the port on the container.<br />
+The command shown here publishes the container&rsquo;s port 3000 to 127.0.0.1:3000 (localhost:3000) on the host.&nbsp;<br />
+Without the port mapping, you wouldn&rsquo;t be able to access the application from the host.</p>
+
+<p><br />
+docker build -t getting-started .<br />
+docker tag getting-started lafrog/getting-started:0.0.1<br />
+docker push lafrog/getting-started:0.0.1<br />
+docker run -dp 0.0.0.0:3000:3000 lafrog/getting-started:0.0.1<br />
+docker exec naughty_gagarin cat /data.txt<br />
+docker run -dp 0.0.0.0:3000:3000 --mount type=volume,src=todo-db,target=/etc/todos lafrog/getting-started:0.0.1</p>
+
+<p>docker network create todo-app</p>
+
+<p>docker run -d `<br />
+&nbsp; &nbsp; &nbsp;--network todo-app --network-alias mysql `<br />
+&nbsp; &nbsp; &nbsp;-v todo-mysql-data:/var/lib/mysql `<br />
+&nbsp; &nbsp; &nbsp;-e MYSQL_ROOT_PASSWORD=secret `<br />
+&nbsp; &nbsp; &nbsp;-e MYSQL_DATABASE=todos `<br />
+&nbsp; &nbsp; &nbsp;mysql:8.0<br />
+&nbsp;&nbsp; &nbsp;&nbsp;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;<br />
+docker run -dp 127.0.0.1:3000:3000 -w /app -v &quot;$(pwd):/app&quot; --network todo-app -e MYSQL_HOST=mysql -e MYSQL_USER=root -e MYSQL_PASSWORD=secret -e MYSQL_DB=todos node:18-alpine sh -c &quot;yarn install &amp;&amp; yarn run dev&quot;<br />
+In powershell<br />
+docker exec -it &lt;mysql-container-id&gt; mysql -p todos</p>
