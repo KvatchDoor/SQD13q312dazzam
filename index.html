@@ -1,0 +1,542 @@
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%">
+	<tbody>
+		<tr>
+			<td style="vertical-align:top; width:523px">
+			<h3>Commandes de base de Docker</h3>
+
+			<table border="0" cellpadding="0" cellspacing="0" id="cheat_sheet_output_table">
+				<tbody>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker ps</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Liste des conteneurs d&eacute;marr&eacute;s</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker ps -a</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Liste de tous les conteneurs</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker info</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>R&eacute;cup&egrave;re la config&shy;uration du docker</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker version</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>R&eacute;cup&egrave;re la version de docker</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker build -t &lt;Im&shy;&shy;ag&shy;e&shy;&gt;&shy;:&lt;&shy;&shy;Tag&gt; .</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Construit une image Docker &agrave; partir d&#39;un &quot;&shy;Doc&shy;ker&shy;fil&shy;e&quot; ou d&#39;un conteneur.</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker login &lt;re&shy;pos&shy;ito&shy;ry&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Se connecte &agrave; un d&eacute;p&ocirc;t distant</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker push &lt;Im&shy;&shy;ag&shy;e&shy;_&shy;Na&shy;&shy;me&gt;&shy;&shy;:&lt;&shy;T&shy;a&shy;g&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Pousse l&#39;image vers le d&eacute;p&ocirc;t distant</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker pull&lt;I&shy;&shy;ma&shy;g&shy;e&shy;_N&shy;&shy;ame&shy;&shy;&gt;:&shy;&lt;&shy;T&shy;ag&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Extrait l&#39;image du d&eacute;p&ocirc;t distant</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>Commandes des conteneurs</h3>
+
+			<table border="0" cellpadding="0" cellspacing="0" id="cheat_sheet_output_table">
+				<tbody>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker inspect &lt;Co&shy;nta&shy;ine&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Contr&ocirc;le un conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker stats &lt;Co&shy;&shy;nt&shy;a&shy;i&shy;ne&shy;&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Affiche le flux de donn&eacute;es en direct du conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker logs &lt;Co&shy;&shy;&shy;n&shy;t&shy;a&shy;&shy;i&shy;&shy;ne&shy;&shy;&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>R&eacute;cup&egrave;re les journaux du conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker run &lt;Co&shy;&shy;nt&shy;a&shy;i&shy;ne&shy;&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Ex&eacute;cute le conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker kill &lt;Co&shy;&shy;nt&shy;a&shy;i&shy;ne&shy;&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Tue un conteneur en cours d&#39;ex&eacute;c&shy;ution</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker start &lt;Co&shy;&shy;nt&shy;a&shy;i&shy;ne&shy;&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>D&eacute;marre le conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker stop &lt;Co&shy;&shy;nt&shy;a&shy;ine&shy;r</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Arr&ecirc;te un conteneur en cours d&#39;ex&eacute;c&shy;ution</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker restart &lt;Co&shy;&shy;nt&shy;a&shy;i&shy;ne&shy;&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Red&eacute;marre le conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker rm &lt;Co&shy;&shy;nt&shy;a&shy;i&shy;ne&shy;&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Supprime le conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker port &lt;Co&shy;&shy;nt&shy;a&shy;i&shy;ne&shy;&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Liste le mappage des ports du conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker pause &lt;Co&shy;&shy;nt&shy;a&shy;i&shy;ne&shy;&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Suspend tous les processus du conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker unpause &lt;Co&shy;nta&shy;ine&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>D&eacute;-suspens de tous les processus du conteneur</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>&lt;Co&shy;nta&shy;ine&shy;r&gt; peut &ecirc;tre remplac&eacute; par l&#39;ID ou le NOM du conteneur.</p>
+
+			<h3>Commandes des r&eacute;seaux</h3>
+
+			<table border="0" cellpadding="0" cellspacing="0" id="cheat_sheet_output_table">
+				<tbody>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker network ls</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Liste des r&eacute;seaux</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker network inspect &lt;Ne&shy;&shy;tw&shy;o&shy;r&shy;k&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Contr&ocirc;le les inform&shy;ations d&#39;un r&eacute;seau</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker network create &lt;Ne&shy;&shy;tw&shy;o&shy;r&shy;k&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Cr&eacute;e un r&eacute;seau</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker network rm &lt;Ne&shy;&shy;tw&shy;o&shy;r&shy;k&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Supprime un r&eacute;seau</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker network connect &lt;Ne&shy;&shy;tw&shy;o&shy;r&shy;k&gt; &lt;Co&shy;&shy;nt&shy;a&shy;i&shy;ne&shy;&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Connecte un conteneur au r&eacute;seau</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker network connect --ip &lt;IP&gt; &lt;Ne&shy;&shy;tw&shy;o&shy;r&shy;k&gt; &lt;Co&shy;&shy;nt&shy;a&shy;i&shy;ne&shy;&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Sp&eacute;cifie l&#39;adresse IP de l&#39;inte&shy;rface du conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker network disconnect &lt;Ne&shy;&shy;tw&shy;o&shy;r&shy;k_&shy;&shy;Nam&shy;&shy;e&gt; &lt;Co&shy;&shy;nt&shy;a&shy;i&shy;ne&shy;&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>D&eacute;connecte le conteneur du r&eacute;seau</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>&lt;R&eacute;&shy;sea&shy;u&gt; peut &ecirc;tre remplac&eacute; par l&#39;ID ou le NOM du r&eacute;seau</p>
+
+			<h3>Divers Commandes</h3>
+
+			<table border="0" cellpadding="0" cellspacing="0" id="cheat_sheet_output_table">
+				<tbody>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker cp &lt;Co&shy;&shy;nt&shy;a&shy;i&shy;ne&shy;&shy;r&gt;:&shy;&shy;&lt;s&shy;o&shy;u&shy;rc&shy;&shy;e_p&shy;&shy;at&shy;h&gt; &lt;de&shy;&shy;st&shy;_&shy;p&shy;at&shy;&shy;h&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Copie du conteneur vers l&#39;h&ocirc;te</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker cp &lt;so&shy;urc&shy;e_p&shy;ath&gt; &lt;Co&shy;nta&shy;ine&shy;r&gt;:&shy;&lt;de&shy;st_&shy;pat&shy;h&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Copie de l&#39;h&ocirc;te au conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker exec -ti &lt;Co&shy;&shy;nt&shy;a&shy;i&shy;ne&shy;&shy;r&gt; &lt;En&shy;&shy;tr&shy;y&shy;p&shy;oi&shy;&shy;nt&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Ex&eacute;cute le terminal d&#39;un conteneur vivant</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+			<td style="width:36px">&nbsp;</td>
+			<td style="vertical-align:top">
+			<h3>Mots cl&eacute;s des options</h3>
+
+			<table border="0" cellpadding="0" cellspacing="0" id="cheat_sheet_output_table">
+				<tbody>
+					<tr>
+						<td style="vertical-align:top">
+						<p>-p, &ndash;-publish</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Mappage des ports entre l&#39;h&ocirc;te et le conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>--publ&shy;&shy;is&shy;h-all</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Publie tous les ports</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>--expose</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Expose le port du conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>-d, &ndash;-detach</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Ex&eacute;cute en arri&egrave;r&shy;e-plan</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>-e, &ndash;-env</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>d&eacute;finit des variables d&#39;envi&shy;ron&shy;nement</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>-v, --volume</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Monte des fichiers ou des r&eacute;pert&shy;oires</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>-i, --inte&shy;&shy;ra&shy;ctive</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Fournit l&#39;acc&egrave;s &agrave; une invite de commande dans un conteneur en cours d&#39;ex&eacute;c&shy;ution</p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="vertical-align:top">
+						<p>-t, --tty</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>exec</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Ex&eacute;cute une nouvelle commande dans un conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>cp</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>copie des donn&eacute;es entre le conteneur et l&#39;h&ocirc;te ou l&#39;inverse</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>Ces mots-cl&eacute;s d&#39;options peuvent &ecirc;tre ajout&eacute;s &agrave; la plupart des commandes docker</p>
+
+			<h3>Commandes d&#39;images</h3>
+
+			<table border="0" cellpadding="0" cellspacing="0" id="cheat_sheet_output_table">
+				<tbody>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker images</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Liste les images dispon&shy;ibles localement</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker run &lt;Im&shy;&shy;ag&shy;e&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Ex&eacute;cute l&#39;image</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker create &lt;Im&shy;&shy;ag&shy;e&shy;&gt;&shy;:&lt;&shy;&shy;Tag&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Cr&eacute;e une image</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker rmi &lt;Im&shy;&shy;ag&shy;e&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Supprime l&#39;image</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker save &lt;Im&shy;&shy;ag&shy;e&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Sauvegarde des images dans une archive tar</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker search &lt;im&shy;age&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Recherche d&#39;images Docker</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker pull &lt;im&shy;age&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>R&eacute;cup&egrave;re une image docker</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker build -t &lt;im&shy;age&shy;&gt;:&lt;&shy;tag&gt; &lt;ru&shy;n_d&shy;ire&shy;cto&shy;ry&gt; -f &lt;do&shy;cke&shy;rfi&shy;le&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Construit une image &agrave; partir d&#39;un &quot;&shy;doc&shy;ker&shy;fil&shy;e&quot;</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker image prune</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Supprime toutes les images docker inutil&shy;is&eacute;es</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>Commandes sur les volumes</h3>
+
+			<table border="0" cellpadding="0" cellspacing="0" id="cheat_sheet_output_table">
+				<tbody>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker volume ls</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Liste les volumes</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker volume inspect &lt;Vo&shy;&shy;lu&shy;m&shy;e&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Contr&ocirc;le le volume</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker volume create &lt;Vo&shy;&shy;lu&shy;m&shy;e&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Cr&eacute;e un volume</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker volume rm &lt;Vo&shy;&shy;lu&shy;m&shy;e&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Supprime un volume</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker volume prune</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Supprime les volumes inutilis&eacute;s</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>&lt;Vo&shy;lum&shy;e&gt; peut &ecirc;tre remplac&eacute; par l&#39;ID ou le NOM du volume</p>
+
+			<h3>D&eacute;pannage</h3>
+
+			<table border="0" cellpadding="0" cellspacing="0" id="cheat_sheet_output_table">
+				<tbody>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker system df</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Montre l&#39;espace disque utilis&eacute; par le docker</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker system info</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Affiche les inform&shy;ations sur le syst&egrave;me Docker</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker diff &lt;co&shy;nta&shy;ine&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Affiche tous les fichiers qui ont &eacute;t&eacute; modifi&eacute;s depuis le d&eacute;marrage</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker top &lt;co&shy;nta&shy;ine&shy;r&gt;</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Afficher le r&eacute;sultat de la commande &quot;&shy;top&shy;&quot; des processus en cours d&#39;ex&eacute;c&shy;ution dans un conteneur</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">
+						<p>docker stats</p>
+						</td>
+						<td style="vertical-align:top">
+						<p>Affiche le r&eacute;sultat de la commande &quot;&shy;top&shy;&quot; de tous les conteneurs Docker</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
